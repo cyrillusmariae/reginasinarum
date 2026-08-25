@@ -140,6 +140,23 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 
+  const projectModalElement = document.querySelector('#projectModal');
+  const projectModal = projectModalElement ? new bootstrap.Modal(projectModalElement) : null;
+  const projectModalTitle = document.querySelector('#projectModalTitle');
+  const projectModalType = document.querySelector('#projectModalType');
+  const projectModalDescription = document.querySelector('#projectModalDescription');
+  const projectModalVisit = document.querySelector('#projectModalVisit');
+
+  document.querySelectorAll('.project-details-button').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (projectModalTitle) projectModalTitle.textContent = button.dataset.projectTitle || '';
+      if (projectModalType) projectModalType.textContent = button.dataset.projectType || '';
+      if (projectModalDescription) projectModalDescription.textContent = button.dataset.projectDescription || '';
+      if (projectModalVisit) projectModalVisit.href = button.dataset.projectUrl || '#';
+      projectModal?.show();
+    });
+  });
+
   const workFilters = document.querySelectorAll('.work-filter');
   const workItems = document.querySelectorAll('.work-grid > [data-category]');
   const workGrid = document.querySelector('.work-grid');
