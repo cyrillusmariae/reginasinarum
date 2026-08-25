@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Regina Sinarum Studio creates thoughtful digital identities and websites for people, places, and purpose-led organisations.">
+  <title>Regina Sinarum Studio | Digital design with meaning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="page-loader" id="pageLoader" aria-live="polite" aria-label="Loading website">
+    <div class="loader-brand">RS <span>Studio</span></div>
+    <div class="loader-progress"><span id="loaderBar"></span></div>
+    <div class="loader-status"><span id="loaderPercent">0%</span><span>Preparing your experience</span></div>
+  </div>
+  <div class="site-noise" aria-hidden="true"></div>
+  <nav class="navbar navbar-expand-lg fixed-top" id="siteNav">
+    <div class="container">
+      <a class="navbar-brand" href="#top" aria-label="Regina Sinarum Studio home">
+        <span>Regina Sinarum Studio</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="https://cyrillusmariae.github.io/reginasinarum/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><button class="theme-switch" id="themeSwitch" type="button" aria-label="Switch to dark mode" aria-pressed="false"><i class="bi bi-moon-stars-fill"></i></button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero-section section-pad">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="container position-relative">
+        <div class="row align-items-end g-5">
+          <div class="col-lg-8">
+            <p class="eyebrow reveal"><span class="eyebrow-dot"></span> Independent website degisn studio</p>
+            <h1 class="display-title reveal delay-1">Make your work<br><em>impossible</em> to overlook.</h1>
+            <p class="hero-copy reveal delay-2">Brand identities and websites for people building something with a little more heart, clarity, and conviction.</p>
+            <div class="hero-actions reveal delay-3">
+              <a class="btn btn-primary-custom" href="#work">Explore selected work <i class="bi bi-arrow-up-right"></i></a>
+              <a class="text-link" href="#contact">Start a conversation <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="hero-note reveal delay-3">
+              <span class="note-number">01</span>
+              <p>Designing digital places that feel considered, useful, and unmistakably yours.</p>
+              <div class="note-line"></div>
+              <span class="note-caption">Norfolk · United Kingdom<br>Working worldwide</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-footer reveal delay-4"><span>Scroll to discover</span><span class="hero-line"></span><span>Scroll / 01</span></div>
+      </div>
+    </section>
+
+    <section class="statement-section section-pad" id="about">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-3"><p class="section-label">The studio</p></div>
+          <div class="col-lg-9"><h2 class="statement reveal">The internet is full of noise.<br><span>We make room for meaning.</span></h2><p class="statement-copy reveal delay-1">Regina Sinarum Studio is a small, independent practice for thoughtful brands and ambitious ideas. Every project starts with listening, then turns into a clear visual language people can feel.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section section-pad" id="work">
+      <div class="container">
+        <div class="section-heading d-flex justify-content-between align-items-end reveal"><div><p class="section-label">Selected work</p><h2>Made to be remembered.</h2></div><span class="heading-count">(02)</span></div>
+        <div class="work-filters reveal delay-1" aria-label="Filter projects by category">
+          <button class="work-filter is-active" type="button" data-filter="all">All category</button>
+          <button class="work-filter" type="button" data-filter="organizations">Organizations</button>
+          <button class="work-filter" type="button" data-filter="personal">Personal Website and Portfolio</button>
+        </div>
+        <div class="row g-4 work-grid">
+          <div class="col-lg-7 reveal delay-1" data-category="organizations"><a class="project-card project-amber" href="https://lumenorientalemedia.github.io" target="_blank" rel="noopener noreferrer"><div class="project-art art-amber"><img class="project-cover" src="images/lumenorientalemedia.png" alt="Lumen Orientale Media website cover"><span class="art-caption">Media Production Website</span></div><div class="project-meta"><h3>Lumen Orientale Media</h3><span>View website</span><i class="bi bi-arrow-up-right"></i></div></a></div>
+          <div class="col-lg-5 reveal delay-2" data-category="personal"><a class="project-card project-ink" href="https://cyrillusmariae.github.io" target="_blank" rel="noopener noreferrer"><div class="project-art art-ink"><img class="project-cover" src="images/githubportfolio.png" alt="Cyrillus Mariae Poon portfolio website cover"><span class="art-caption">Personal Website and Portfolio</span></div><div class="project-meta"><h3>Cyrillus Mariae Poon</h3><span>View website</span><i class="bi bi-arrow-up-right"></i></div></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section section-pad" id="services">
+      <div class="container"><div class="row g-5"><div class="col-lg-4"><p class="section-label">What we do</p><h2 class="services-intro">Small team.<br><em>Wide lens.</em></h2></div><div class="col-lg-8"><div class="service-list"><article class="service-item reveal"><span>01</span><div><h3>Brand identity</h3><p>A visual system with a point of view: marks, type, colour, and the details that make you recognisable.</p></div><i class="bi bi-arrow-up-right"></i></article><article class="service-item reveal delay-1"><span>02</span><div><h3>Web design & build</h3><p>Responsive, purposeful websites that make complex ideas easy to navigate and delightful to use.</p></div><i class="bi bi-arrow-up-right"></i></article><article class="service-item reveal delay-2"><span>03</span><div><h3>Creative direction</h3><p>A steady creative hand for launches, campaigns, editorial stories, and the next chapter of your work.</p></div><i class="bi bi-arrow-up-right"></i></article></div></div></div></div>
+    </section>
+
+    <section class="process-section section-pad"><div class="container"><div class="section-heading reveal"><p class="section-label">How we work</p><h2>Clarity, then craft.</h2></div><div class="row g-4 process-grid"><div class="col-md-4 reveal delay-1"><span class="process-number">01</span><h3>Listen closely</h3><p>We learn what matters, what is changing, and what your audience needs to believe.</p></div><div class="col-md-4 reveal delay-2"><span class="process-number">02</span><h3>Find the thread</h3><p>We turn the raw material into a clear idea that can guide every creative decision.</p></div><div class="col-md-4 reveal delay-3"><span class="process-number">03</span><h3>Make it real</h3><p>We build a considered, flexible system that works beautifully in the real world.</p></div></div></div></section>
+
+    <section class="contact-section section-pad" id="contact"><div class="container"><div class="row g-5 align-items-end"><div class="col-lg-7"><p class="section-label reveal">Have a good idea?</p><h2 class="contact-title reveal delay-1">Let’s give it<br><em>some shape.</em></h2></div><div class="col-lg-5"><form class="contact-form reveal delay-2" id="contactForm" action="https://formsubmit.co/cyrillusmariae@outlook.com" method="POST"><input type="hidden" name="_subject" value="New enquiry from Regina Sinarum Studio"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Jane Smith" required><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="hello@example.com" required><label for="message">A little about the project</label><textarea id="message" name="message" rows="3" placeholder="Tell us what you are thinking..." required></textarea><button class="btn btn-primary-custom" type="submit">Send enquiry <i class="bi bi-arrow-up-right"></i></button><p class="form-status" id="formStatus" role="status"></p></form></div></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container d-flex flex-wrap justify-content-between gap-3"><span>© 2026 Regina Sinarum Studio.</span><span>Digital design for the Glory of God</span><a href="#top">Back to top <i class="bi bi-arrow-up-right"></i></a></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
