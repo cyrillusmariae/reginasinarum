@@ -65,7 +65,36 @@
     }
   }, 60000);
 
-  window.addEventListener('scroll', () => nav?.classList.toggle('scrolled', window.scrollY > 24), { passive: true });
+  const pageScroller = document.body;
+  pageScroller.addEventListener('scroll', () => nav?.classList.toggle('scrolled', pageScroller.scrollTop > 24), { passive: true });
+
+  const isPageScrollBoundary = (direction) => {
+    const maxScroll = Math.max(0, pageScroller.scrollHeight - pageScroller.clientHeight);
+    return direction < 0 ? pageScroller.scrollTop <= 0 : pageScroller.scrollTop >= maxScroll - 1;
+  };
+
+  const isInsideScrollableOverlay = (target) => target instanceof Element
+    && Boolean(target.closest('.modal, .site-search-panel'));
+
+  window.addEventListener('wheel', (event) => {
+    if (!isInsideScrollableOverlay(event.target)
+      && event.deltaY !== 0
+      && isPageScrollBoundary(event.deltaY)) event.preventDefault();
+  }, { passive: false });
+
+  let lastTouchY = 0;
+  window.addEventListener('touchstart', (event) => {
+    lastTouchY = event.touches[0]?.clientY || 0;
+  }, { passive: true });
+  window.addEventListener('touchmove', (event) => {
+    const currentTouchY = event.touches[0]?.clientY || lastTouchY;
+    const scrollDirection = lastTouchY - currentTouchY;
+    if (!isInsideScrollableOverlay(event.target)
+      && scrollDirection !== 0
+      && isPageScrollBoundary(scrollDirection)) event.preventDefault();
+    lastTouchY = currentTouchY;
+  }, { passive: false });
+
   document.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('click', () => {
     document.querySelector('.navbar-collapse.show')?.classList.remove('show');
   }));
