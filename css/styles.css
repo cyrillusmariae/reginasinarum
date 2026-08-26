@@ -99,6 +99,7 @@ a { color: inherit; text-decoration: none; }
 .project-card:hover .project-cover { transform: scale(1.04); filter: saturate(1.08); }
 .project-card:hover .project-art { transform: translateY(-6px); }
 .art-amber { background: var(--accent); }
+.art-amber .art-caption { color: #fff; }
 .art-ink { background: #202620; color: var(--paper); min-height: 24rem; }
 .art-ink .art-caption { color: #fff; }
 .art-lilac { background: var(--lilac); min-height: 25rem; }
